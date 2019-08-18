@@ -1,0 +1,18 @@
+<div>
+
+    <h2>League</h2>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Score</th>
+        </thead>
+        <tr ng-if="!player.ceo" ng-repeat="player in leagueCtrl.league | orderBy: '-points'">
+            <td>{{player.name}}</td>
+            <td>{{player.points}}</td>
+        </tr>
+        <tr ng-if="leagueCtrl.ceo">
+            <td><strong>{{leagueCtrl.ceo.name}}</strong></td>
+            <td><strong>0</strong></td>
+        </tr>
+    </table>
+</div>
