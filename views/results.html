@@ -28,8 +28,8 @@
                 </thead>
                 <tr>
                     <td>
-                        <select required name="repeatSelect" id="repeatSelect" ng-model="result.player_1">
-                            <option ng-repeat="option in resultsCtrl.players" value="{{option.name}}">{{option.name}}</option>
+                        <select required name="player1" id="repeatSelect" ng-model="result.player_1">
+                            <option ng-disabled="option.name == scoreEntry.player2.$modelValue" ng-repeat="option in resultsCtrl.players" value="{{option.name}}">{{option.name}}</option>
                         </select>
                     </td>
                     <td class="score-1">
@@ -40,8 +40,8 @@
                         <input name="score_2" min="0" score required type="number" ng-model="result.score_2">
                     </td>
                     <td>
-                        <select required name="repeatSelect" id="repeatSelect" ng-model="result.player_2">
-                            <option ng-repeat="option in resultsCtrl.players" value="{{option.name}}">{{option.name}}</option>
+                        <select required name="player2" id="repeatSelect" ng-model="result.player_2">
+                            <option ng-disabled="option.name == scoreEntry.player1.$modelValue" ng-repeat="option in resultsCtrl.players" value="{{option.name}}">{{option.name}}</option>
                         </select>
                     </td>
                     <td>
